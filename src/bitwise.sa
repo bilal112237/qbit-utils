@@ -1,0 +1,28 @@
+# Bitwise & Flag Utilities for Quantum
+
+fn has_flag(mask, flag) {
+    return (mask & flag) == flag
+}
+
+fn set_flag(mask, flag) {
+    return mask | flag
+}
+
+fn clear_flag(mask, flag) {
+    return mask & (~flag)
+}
+
+fn toggle_flag(mask, flag) {
+    return mask ^ flag
+}
+
+fn is_even(n) {
+    return (n & 1) == 0
+}
+
+fn is_power_of_two(n) {
+    if (n <= 0) {
+        return false
+    }
+    return (n & (n - 1)) == 0
+}

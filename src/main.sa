@@ -1,0 +1,51 @@
+# qbit-utils - Entry Point & Self-Test
+
+fn has_flag(mask, flag) {
+    return (mask & flag) == flag
+}
+
+fn set_flag(mask, flag) {
+    return mask | flag
+}
+
+fn toggle_flag(mask, flag) {
+    return mask ^ flag
+}
+
+fn xor_value(value, key) {
+    return value ^ key
+}
+
+fn simple_hash(seed, value) {
+    return ((seed * 31) + value) & 0x7FFFFFFF
+}
+
+fn run_demo() {
+    let READ = 1
+    let WRITE = 2
+    let EXEC = 4
+
+    let perms = set_flag(READ, WRITE)
+    print("Perms (READ|WRITE):")
+    print(perms)
+
+    print("Has WRITE:")
+    print(has_flag(perms, WRITE))
+
+    perms = toggle_flag(perms, EXEC)
+    print("After toggling EXEC:")
+    print(perms)
+
+    let secret = 42
+    let key = 123
+    let encrypted = xor_value(secret, key)
+    let decrypted = xor_value(encrypted, key)
+    print("XOR Encrypted / Decrypted:")
+    print(encrypted)
+    print(decrypted)
+
+    print("Simple Hash:")
+    print(simple_hash(17, 2026))
+}
+
+run_demo()

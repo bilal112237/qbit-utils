@@ -1,0 +1,17 @@
+{
+  "name": "qbit-utils",
+  "version": "1.0.0",
+  "description": "A lightweight bitwise, checksum, and XOR helper library in Quantum",
+  "main": "main.sa",
+  "scripts": {
+    "test": "quantum src/main.sa",
+    "start": "qrun main.sa"
+  },
+  "keywords": [
+    "qbit-utils",
+    "xor",
+    "checksums"
+  ],
+  "author": "Muhammad Bilal Zaki",
+  "license": "MIT"
+}
