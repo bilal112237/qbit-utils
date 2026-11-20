@@ -4,9 +4,10 @@
   "description": "A lightweight bitwise, checksum, and XOR helper library in Quantum",
   "main": "main.sa",
   "scripts": {
-    "test": "quantum src/main.sa",
+    "test": "quantum main.sa",
     "start": "qrun main.sa"
   },
+  "repository": "https://github.com/bilal112237/qbit-utils",
   "keywords": [
     "qbit-utils",
     "xor",
