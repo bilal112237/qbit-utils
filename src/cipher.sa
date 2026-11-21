@@ -1,0 +1,16 @@
+# Simple XOR & Checksum Utilities for Quantum
+
+fn xor_value(value, key) {
+    return value ^ key
+}
+
+fn simple_hash(seed, value) {
+    let h = seed
+    h = ((h * 31) + value) & 0x7FFFFFFF
+    return h
+}
+
+fn mix_keys(k1, k2) {
+    let mixed = (k1 ^ k2) + ((k1 & k2) * 2)
+    return mixed & 0x7FFFFFFF
+}
